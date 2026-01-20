@@ -1,12 +1,75 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/bmitlLjS)
-# ここにゲームのタイトルを記述する
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/BIOhfmXa)
+# ゲームプログラム構成基礎Ⅱ 必須課題
 
-## ゲームの内容
-ここにゲームの内容説明を記述する
+## ゲームの企画書
+### ゲームのタイトル
+Alter GeaR
 
-![画面イメージ](docs/images/game_image01.png)
+### どのような世界（構図や広さ)で
+人類が機体と生命維持を直結させた「バイオリンク」技術を基盤とする、過酷な近未来の戦闘領域。広大な3Dフィールドを舞台に、常に死と隣り合わせの戦術的交戦が展開される。​
 
-## 操作説明
-例
-- 矢印キー、若しくはAとDキーで左右に砲台を移動する
-- スペースキーを押すとビームを敵に向けて発射する
+### 何を​
+機体の寿命そのものである生命エネルギー「ALTER」を燃焼させ、特殊兵装「ギアズ」を駆使して、敵対勢力を駆逐し、ミッションを完遂することを目指す。
+
+### どのように操作して​
+WASD　移動
+Q　左スロット変更
+E　右スロット変更
+space　ジャンプ
+左クリック　左武装使用
+右クリック　右武装使用
+
+### 何をやるゲームか​
+「現在のHP割合に応じて、ALTER（寿命）の最大保持容量がリアルタイムに減少する」という極限の制約下で、生存と破壊のバランスを制御する。エネルギー消費（攻撃・機動・リロード）と、被弾による「器（最大容量）」の縮小という負のスパイラルを回避しながら、ターゲットを殲滅する。
+
+### 面白い点は何か​
+究極のリソース管理: 攻撃、防御、機動のすべてが「寿命（ALTER）」を削り、一度失ったALTERは一切回復しないという絶望的な緊張感。
+
+バイオリンク・システム: ダメージを受けるほどエネルギーの「器」が小さくなり、溢れたエネルギーが即座に消滅するという、被弾のリスクが致命的な設計。  
+
+### どうなったら成功か​
+指定された全ての敵ターゲットの殲滅
+
+### どうなったら失敗か​
+機体のHP（耐久値）が0になる、または生命エネルギー「ALTER」が完全に枯渇（寿命切れ）すること。
+
+## 実行時の画面のスクリーンショット（1枚以上）
+（画像をドラッグ＆ドロップすると<img width="1920" height="1080" alt="スクリーンショット (79)" src="https://github.com/user-attachments/assets/c75050af-1a97-4ade-8c93-9112fd3a940c" />
+追加されます）
+
+
+
+## アピールポイント
+バイオリンク・システムの完全実装: HPの割合に連動してALTERの最大容量（Cap）を物理的に制限し、UI上でバーの幅自体がリアルタイムに伸縮する視覚的・機能的連動を実現。
+高度な機動・防御仕様: スタミナを消費する高無敵回避と、秒間ALTER消費によるシールド（および鉄壁のフルシールド）、慣性力を伴うエアステップの実装。
+
+## 技術的に工夫した点、ゲームの面白さを高めるために工夫した点など
+
+UI: BioLinkHUDにより、HP減少に伴うALTERバーの「物理的な縮小」と、容量超過分の即時ロストを視覚的に表現し、プレイヤーにリソース管理の重要性を突きつける設計。
+
+## 使用したアセットの名前とURL
+（UnityのAsset Store以外のものも含む）
+https://assetstore.unity.com/packages/3d/characters/humanoids/humans/lowpoly-bountyhunter-rio-2-287264
+https://assetstore.unity.com/packages/3d/animations/human-basic-motions-free-154271
+https://assetstore.unity.com/packages/3d/animations/rpg-character-mecanim-animation-pack-free-65284
+https://assetstore.unity.com/packages/3d/animations/human-spellcasting-animations-free-326043
+
+
+## AI利用報告
+### 使用したAIツール名
+(例: ChatGPT-4o, Gemini)
+Gemini (Unity Expert Engineer Partner)
+
+### どの部分で使用したか
+(例: プレイヤーの移動スクリプトの修正、背景画像の生成、BGMの作成)
+移動スクリプト
+UIスクリプト
+武装スクリプト
+敵AIスクリプト
+
+### AI利用でうまくいったこと、いかなかったこと
+
+うまくいったこと: 「HPの割合でALTER容量が削れる」という特殊なリソース連動を、バグなく論理的に整合のとれたコードで実装できた。また、Inspector上での調整のしやすさを最優先した設計が実現できた。
+上手くいかなかったこと：自分が作りたいものを作りきることが難しいと感じた。指示の適切さはもちろん自分自身がコードの構造を理解していないと時間をとられるので、完全にすべてのやりたいことを実装しきれなかった。
+## この授業を受けた感想
+とても面白い講義でした。僕自身はAIを使ったゲーム制作となりましたが、一からコーディングするのと、AIを使ったコーディングのどちらも地力がついていないとうまくいかないのを体感しました。もっともっと経験を積んでいきたいと思います。
